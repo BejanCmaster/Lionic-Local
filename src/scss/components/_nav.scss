@@ -1,0 +1,23 @@
+.nav {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1c1c1c;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #3172b9;
+    }
+  }
+}
