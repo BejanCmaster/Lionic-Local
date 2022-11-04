@@ -1,6 +1,6 @@
 .whatwedo {
   padding-bottom: 199px;
-  
+
   &__descr {
     margin: 0;
     margin-top: 36px;
@@ -8,5 +8,93 @@
     font-weight: 400;
     color: #787878;
     text-align: center;
+  }
+
+  &__wrapper {
+    margin-top: 55px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__item {
+    padding: 0 32px;
+    padding-bottom: 64px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    background: var(--light-color);
+    text-align: center;
+    z-index: 10;
+
+    &:hover {
+       color: var(--light-color);
+
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        opacity: 1;
+      }
+
+      .whatwedo__subtitle {
+        color: var(--light-color);
+      }
+      .whatwedo__subdescr {
+        color: var(--light-color);
+      }
+
+      svg {
+        fill: var(--light-color);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3px;
+      border: 2px solid #3172b9;
+      border-radius: inherit;
+      opacity: 0;
+      background-color: #4086d3;
+      transition: opacity 0.3s ease-in-out
+    }
+
+    svg {
+      width: 65px;
+      height: 65px;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+      fill: #3172b9;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 20px;
+    color: #1c1c1c;
+  }
+
+  &__subdescr {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 14px;
+    color: #787878;
   }
 }
